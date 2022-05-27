@@ -35,60 +35,60 @@ reload.onclick = () => {
         e.target.innerHTML = '×';
     }
     else {
-        e.target.innerHTML = '○';
+        e.target.innerHTML = 'o';
     }
-    if (cells[0].innerHTML == '○' &
-        cells[1].innerHTML == '○' &
-        cells[2].innerHTML == '○'
+    if (cells[0].innerHTML == 'o' &
+        cells[1].innerHTML == 'o' &
+        cells[2].innerHTML == 'o'
     ) {
         winO();
         wPs[0].style.display = 'block';
     };
-    if (cells[3].innerHTML == '○' &
-        cells[4].innerHTML == '○' &
-        cells[5].innerHTML == '○'
+    if (cells[3].innerHTML == 'o' &
+        cells[4].innerHTML == 'o' &
+        cells[5].innerHTML == 'o'
     ) {
         winO();
         wPs[1].style.display = 'block';
     };
-    if (cells[6].innerHTML == '○' &
-        cells[7].innerHTML == '○' &
-        cells[8].innerHTML == '○'
+    if (cells[6].innerHTML == 'o' &
+        cells[7].innerHTML == 'o' &
+        cells[8].innerHTML == 'o'
     ) {
         winO();
         wPs[2].style.display = 'block';
     };
-    if (cells[0].innerHTML == '○' &
-        cells[4].innerHTML == '○' &
-        cells[8].innerHTML == '○'
+    if (cells[0].innerHTML == 'o' &
+        cells[4].innerHTML == 'o' &
+        cells[8].innerHTML == 'o'
     ) {
         winO();
         wPs[7].style.display = 'block';
     };
-    if (cells[2].innerHTML == '○' &
-        cells[4].innerHTML == '○' &
-        cells[6].innerHTML == '○'
+    if (cells[2].innerHTML == 'o' &
+        cells[4].innerHTML == 'o' &
+        cells[6].innerHTML == 'o'
     ) {
         winO();
         wPs[6].style.display = 'block';
     };
-    if (cells[0].innerHTML == '○' &
-        cells[3].innerHTML == '○' &
-        cells[6].innerHTML == '○'
+    if (cells[0].innerHTML == 'o' &
+        cells[3].innerHTML == 'o' &
+        cells[6].innerHTML == 'o'
     ) {
         winO();
         wPs[3].style.display = 'block';
     };
-    if (cells[1].innerHTML == '○' &
-        cells[4].innerHTML == '○' &
-        cells[7].innerHTML == '○'
+    if (cells[1].innerHTML == 'o' &
+        cells[4].innerHTML == 'o' &
+        cells[7].innerHTML == 'o'
     ) {
         winO();
         wPs[4].style.display = 'block';
     };
-    if (cells[2].innerHTML == '○' &
-        cells[5].innerHTML == '○' &
-        cells[8].innerHTML == '○'
+    if (cells[2].innerHTML == 'o' &
+        cells[5].innerHTML == 'o' &
+        cells[8].innerHTML == 'o'
     ) {
         winO();
         wPs[5].style.display = 'block';
@@ -153,15 +153,15 @@ reload.onclick = () => {
         winX();
         wPs[5].style.display = 'block';
     } else if (
-        (cells[0].innerHTML == '×' || cells[0].innerHTML == '○') &
-        (cells[1].innerHTML == '×' || cells[1].innerHTML == '○') &
-        (cells[2].innerHTML == '×' || cells[2].innerHTML == '○') &
-        (cells[3].innerHTML == '×' || cells[3].innerHTML == '○') &
-        (cells[4].innerHTML == '×' || cells[4].innerHTML == '○') &
-        (cells[5].innerHTML == '×' || cells[5].innerHTML == '○') &
-        (cells[6].innerHTML == '×' || cells[6].innerHTML == '○') &
-        (cells[7].innerHTML == '×' || cells[7].innerHTML == '○') &
-        (cells[8].innerHTML == '×' || cells[8].innerHTML == '○') 
+        (cells[0].innerHTML == '×' || cells[0].innerHTML == 'o') &
+        (cells[1].innerHTML == '×' || cells[1].innerHTML == 'o') &
+        (cells[2].innerHTML == '×' || cells[2].innerHTML == 'o') &
+        (cells[3].innerHTML == '×' || cells[3].innerHTML == 'o') &
+        (cells[4].innerHTML == '×' || cells[4].innerHTML == 'o') &
+        (cells[5].innerHTML == '×' || cells[5].innerHTML == 'o') &
+        (cells[6].innerHTML == '×' || cells[6].innerHTML == 'o') &
+        (cells[7].innerHTML == '×' || cells[7].innerHTML == 'o') &
+        (cells[8].innerHTML == '×' || cells[8].innerHTML == 'o') 
         ){
             if (!hasWin){
                 winAlert.style.display = "block"
@@ -192,6 +192,6 @@ function winO() {
     setTimeout(() => {
         winAlert.style.display = "block";
         oo.style.display = "inline";
-    }, 50)
+    }, 50);
     window.removeEventListener('click', doing);
 }
