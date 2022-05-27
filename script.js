@@ -192,6 +192,6 @@ function winO() {
     setTimeout(() => {
         winAlert.style.display = "block";
         oo.style.display = "inline";
-    }, 50);
+    }, 50)
     window.removeEventListener('click', doing);
 }
