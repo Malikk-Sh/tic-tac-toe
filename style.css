@@ -39,15 +39,13 @@ body {
     font-size: 6em;
     text-align: center;
     line-height: 0.9;
+    font-family: 'Courier New', Courier, monospace;
 }
 h1 {
     text-align: center;
     background: #999;
     width: 100vw;
-}
-#chanses {
-    width: 50px;
-    text-align: center;
+    color: pink;
 }
 .win-positions span {
     background: #AAA;
@@ -139,5 +137,5 @@ h1 {
     font-size: 50px;
 }
 #oo {
-    font-size: 36px;
+    font-size: 35px;
 }
