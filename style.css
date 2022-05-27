@@ -11,8 +11,8 @@ body {
     overflow: auto;
 }
 .container {
-    width: 501px;
-    height: 501px;
+    width: 100vw;
+    height: 100vw;
     max-width: 501px;
     max-height: 501px;
     position: relative;
