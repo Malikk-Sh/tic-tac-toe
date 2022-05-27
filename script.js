@@ -169,7 +169,7 @@ let doing = function (e) {
         }
     };
 }
-// window.addEventListener('click', doing);
+window.addEventListener('click', doing);
 
 let xx = document.getElementById("xx");
 
@@ -185,7 +185,7 @@ function winX() {
         winAlert.style.display = "block";
         xx.style.display = "inline"
     }, 50);
-    // window.removeEventListener('click', doing);
+    window.removeEventListener('click', doing);
     window.removeEventListener('touchstart', doing);
     window.removeEventListener('touchend', doing);
 }
@@ -195,7 +195,7 @@ function winO() {
         winAlert.style.display = "block";
         oo.style.display = "inline";
     }, 50);
-    // window.removeEventListener('click', doing);
+    window.removeEventListener('click', doing);
     window.removeEventListener('touchstart', doing);
     window.removeEventListener('touchend', doing);
 }
