@@ -23,7 +23,7 @@ reload.onclick = () => {
     return false
 }
 
- let doing = function(e) {
+let doing = function (e) {
     if (!e.target.classList.contains('cell')) return;
     if (e.target.innerHTML) {
         return;
@@ -32,7 +32,7 @@ reload.onclick = () => {
     }
     // console.log(e.target);
     if (hod %= 2) {
-        e.target.innerHTML = '×';
+        e.target.innerHTML = 'x';
     }
     else {
         e.target.innerHTML = 'o';
@@ -97,79 +97,79 @@ reload.onclick = () => {
 
 
 
-    if (cells[0].innerHTML == '×' &
-        cells[1].innerHTML == '×' &
-        cells[2].innerHTML == '×'
+    if (cells[0].innerHTML == 'x' &
+        cells[1].innerHTML == 'x' &
+        cells[2].innerHTML == 'x'
     ) {
         winX();
         wPs[0].style.display = 'block';
     };
-    if (cells[3].innerHTML == '×' &
-        cells[4].innerHTML == '×' &
-        cells[5].innerHTML == '×'
+    if (cells[3].innerHTML == 'x' &
+        cells[4].innerHTML == 'x' &
+        cells[5].innerHTML == 'x'
     ) {
         winX();
         wPs[1].style.display = 'block';
     };
-    if (cells[6].innerHTML == '×' &
-        cells[7].innerHTML == '×' &
-        cells[8].innerHTML == '×'
+    if (cells[6].innerHTML == 'x' &
+        cells[7].innerHTML == 'x' &
+        cells[8].innerHTML == 'x'
     ) {
         winX();
         wPs[2].style.display = 'block';
     };
-    if (cells[0].innerHTML == '×' &
-        cells[4].innerHTML == '×' &
-        cells[8].innerHTML == '×'
+    if (cells[0].innerHTML == 'x' &
+        cells[4].innerHTML == 'x' &
+        cells[8].innerHTML == 'x'
     ) {
         winX();
         wPs[7].style.display = 'block';
     };
-    if (cells[2].innerHTML == '×' &
-        cells[4].innerHTML == '×' &
-        cells[6].innerHTML == '×'
+    if (cells[2].innerHTML == 'x' &
+        cells[4].innerHTML == 'x' &
+        cells[6].innerHTML == 'x'
     ) {
         winX();
         wPs[6].style.display = 'block';
     };
-    if (cells[0].innerHTML == '×' &
-        cells[3].innerHTML == '×' &
-        cells[6].innerHTML == '×'
+    if (cells[0].innerHTML == 'x' &
+        cells[3].innerHTML == 'x' &
+        cells[6].innerHTML == 'x'
     ) {
         winX();
         wPs[3].style.display = 'block';
     };
-    if (cells[1].innerHTML == '×' &
-        cells[4].innerHTML == '×' &
-        cells[7].innerHTML == '×'
+    if (cells[1].innerHTML == 'x' &
+        cells[4].innerHTML == 'x' &
+        cells[7].innerHTML == 'x'
     ) {
         winX();
         wPs[4].style.display = 'block';
     };
-    if (cells[2].innerHTML == '×' &
-        cells[5].innerHTML == '×' &
-        cells[8].innerHTML == '×'
+    if (cells[2].innerHTML == 'x' &
+        cells[5].innerHTML == 'x' &
+        cells[8].innerHTML == 'x'
     ) {
         winX();
         wPs[5].style.display = 'block';
     } else if (
-        (cells[0].innerHTML == '×' || cells[0].innerHTML == 'o') &
-        (cells[1].innerHTML == '×' || cells[1].innerHTML == 'o') &
-        (cells[2].innerHTML == '×' || cells[2].innerHTML == 'o') &
-        (cells[3].innerHTML == '×' || cells[3].innerHTML == 'o') &
-        (cells[4].innerHTML == '×' || cells[4].innerHTML == 'o') &
-        (cells[5].innerHTML == '×' || cells[5].innerHTML == 'o') &
-        (cells[6].innerHTML == '×' || cells[6].innerHTML == 'o') &
-        (cells[7].innerHTML == '×' || cells[7].innerHTML == 'o') &
-        (cells[8].innerHTML == '×' || cells[8].innerHTML == 'o') 
-        ){
-            if (!hasWin){
-                winAlert.style.display = "block"
-                winAlert.innerHTML = 'Ничья!';
-            }
-        };
+        (cells[0].innerHTML == 'x' || cells[0].innerHTML == 'o') &
+        (cells[1].innerHTML == 'x' || cells[1].innerHTML == 'o') &
+        (cells[2].innerHTML == 'x' || cells[2].innerHTML == 'o') &
+        (cells[3].innerHTML == 'x' || cells[3].innerHTML == 'o') &
+        (cells[4].innerHTML == 'x' || cells[4].innerHTML == 'o') &
+        (cells[5].innerHTML == 'x' || cells[5].innerHTML == 'o') &
+        (cells[6].innerHTML == 'x' || cells[6].innerHTML == 'o') &
+        (cells[7].innerHTML == 'x' || cells[7].innerHTML == 'o') &
+        (cells[8].innerHTML == 'x' || cells[8].innerHTML == 'o')
+    ) {
+        if (!hasWin) {
+            winAlert.style.display = "block"
+            winAlert.innerHTML = 'Ничья!';
+        }
+    };
 }
-window.addEventListener('click', doing);
+// window.addEventListener('click', doing);
 
 let xx = document.getElementById("xx");
 
@@ -185,7 +185,9 @@ function winX() {
         winAlert.style.display = "block";
         xx.style.display = "inline"
     }, 50);
-    window.removeEventListener('click', doing);
+    // window.removeEventListener('click', doing);
+    window.removeEventListener('touchstart', doing);
+    window.removeEventListener('touchend', doing);
 }
 function winO() {
     hasWin = true
@@ -193,5 +195,9 @@ function winO() {
         winAlert.style.display = "block";
         oo.style.display = "inline";
     }, 50);
-    window.removeEventListener('click', doing);
+    // window.removeEventListener('click', doing);
+    window.removeEventListener('touchstart', doing);
+    window.removeEventListener('touchend', doing);
 }
+window.addEventListener('touchend', doing);
+window.addEventListener('touchstart', doing);
