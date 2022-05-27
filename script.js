@@ -35,60 +35,60 @@ reload.onclick = () => {
         e.target.innerHTML = '×';
     }
     else {
-        e.target.innerHTML = '𐌏';
+        e.target.innerHTML = '○';
     }
-    if (cells[0].innerHTML == '𐌏' &
-        cells[1].innerHTML == '𐌏' &
-        cells[2].innerHTML == '𐌏'
+    if (cells[0].innerHTML == '○' &
+        cells[1].innerHTML == '○' &
+        cells[2].innerHTML == '○'
     ) {
         winO();
         wPs[0].style.display = 'block';
     };
-    if (cells[3].innerHTML == '𐌏' &
-        cells[4].innerHTML == '𐌏' &
-        cells[5].innerHTML == '𐌏'
+    if (cells[3].innerHTML == '○' &
+        cells[4].innerHTML == '○' &
+        cells[5].innerHTML == '○'
     ) {
         winO();
         wPs[1].style.display = 'block';
     };
-    if (cells[6].innerHTML == '𐌏' &
-        cells[7].innerHTML == '𐌏' &
-        cells[8].innerHTML == '𐌏'
+    if (cells[6].innerHTML == '○' &
+        cells[7].innerHTML == '○' &
+        cells[8].innerHTML == '○'
     ) {
         winO();
         wPs[2].style.display = 'block';
     };
-    if (cells[0].innerHTML == '𐌏' &
-        cells[4].innerHTML == '𐌏' &
-        cells[8].innerHTML == '𐌏'
+    if (cells[0].innerHTML == '○' &
+        cells[4].innerHTML == '○' &
+        cells[8].innerHTML == '○'
     ) {
         winO();
         wPs[7].style.display = 'block';
     };
-    if (cells[2].innerHTML == '𐌏' &
-        cells[4].innerHTML == '𐌏' &
-        cells[6].innerHTML == '𐌏'
+    if (cells[2].innerHTML == '○' &
+        cells[4].innerHTML == '○' &
+        cells[6].innerHTML == '○'
     ) {
         winO();
         wPs[6].style.display = 'block';
     };
-    if (cells[0].innerHTML == '𐌏' &
-        cells[3].innerHTML == '𐌏' &
-        cells[6].innerHTML == '𐌏'
+    if (cells[0].innerHTML == '○' &
+        cells[3].innerHTML == '○' &
+        cells[6].innerHTML == '○'
     ) {
         winO();
         wPs[3].style.display = 'block';
     };
-    if (cells[1].innerHTML == '𐌏' &
-        cells[4].innerHTML == '𐌏' &
-        cells[7].innerHTML == '𐌏'
+    if (cells[1].innerHTML == '○' &
+        cells[4].innerHTML == '○' &
+        cells[7].innerHTML == '○'
     ) {
         winO();
         wPs[4].style.display = 'block';
     };
-    if (cells[2].innerHTML == '𐌏' &
-        cells[5].innerHTML == '𐌏' &
-        cells[8].innerHTML == '𐌏'
+    if (cells[2].innerHTML == '○' &
+        cells[5].innerHTML == '○' &
+        cells[8].innerHTML == '○'
     ) {
         winO();
         wPs[5].style.display = 'block';
@@ -153,15 +153,15 @@ reload.onclick = () => {
         winX();
         wPs[5].style.display = 'block';
     } else if (
-        (cells[0].innerHTML == '×' || cells[0].innerHTML == '𐌏') &
-        (cells[1].innerHTML == '×' || cells[1].innerHTML == '𐌏') &
-        (cells[2].innerHTML == '×' || cells[2].innerHTML == '𐌏') &
-        (cells[3].innerHTML == '×' || cells[3].innerHTML == '𐌏') &
-        (cells[4].innerHTML == '×' || cells[4].innerHTML == '𐌏') &
-        (cells[5].innerHTML == '×' || cells[5].innerHTML == '𐌏') &
-        (cells[6].innerHTML == '×' || cells[6].innerHTML == '𐌏') &
-        (cells[7].innerHTML == '×' || cells[7].innerHTML == '𐌏') &
-        (cells[8].innerHTML == '×' || cells[8].innerHTML == '𐌏') 
+        (cells[0].innerHTML == '×' || cells[0].innerHTML == '○') &
+        (cells[1].innerHTML == '×' || cells[1].innerHTML == '○') &
+        (cells[2].innerHTML == '×' || cells[2].innerHTML == '○') &
+        (cells[3].innerHTML == '×' || cells[3].innerHTML == '○') &
+        (cells[4].innerHTML == '×' || cells[4].innerHTML == '○') &
+        (cells[5].innerHTML == '×' || cells[5].innerHTML == '○') &
+        (cells[6].innerHTML == '×' || cells[6].innerHTML == '○') &
+        (cells[7].innerHTML == '×' || cells[7].innerHTML == '○') &
+        (cells[8].innerHTML == '×' || cells[8].innerHTML == '○') 
         ){
             if (!hasWin){
                 winAlert.style.display = "block"
