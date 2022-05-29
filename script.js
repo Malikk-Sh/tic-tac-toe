@@ -16,79 +16,81 @@ let winAlert = document.querySelector('.win-alert');
 
 let reload = document.querySelector('.reload');
 
-let hasWin = false
+let hasWin = false;
+
+let xSimbol = '×';
+let oSimbol = '○';
 
 reload.onclick = () => {
     location.reload();
-    return false
+    return false;
 }
 
 let doing = function (e) {
-    if (!e.target.classList.contains('cell')) return;
+        if (!e.target.classList.contains('cell')) return;
     if (e.target.innerHTML) {
         return;
     } else {
         hod++;
     }
-    // console.log(e.target);
     if (hod %= 2) {
-        e.target.innerHTML = 'x';
+        e.target.innerHTML = xSimbol;
     }
     else {
-        e.target.innerHTML = 'o';
+        e.target.innerHTML = oSimbol;
     }
-    if (cells[0].innerHTML == 'o' &
-        cells[1].innerHTML == 'o' &
-        cells[2].innerHTML == 'o'
+    if (cells[0].innerHTML == oSimbol &
+        cells[1].innerHTML == oSimbol &
+        cells[2].innerHTML == oSimbol
     ) {
         winO();
         wPs[0].style.display = 'block';
     };
-    if (cells[3].innerHTML == 'o' &
-        cells[4].innerHTML == 'o' &
-        cells[5].innerHTML == 'o'
+    if (cells[3].innerHTML == oSimbol &
+        cells[4].innerHTML == oSimbol &
+        cells[5].innerHTML == oSimbol
     ) {
         winO();
         wPs[1].style.display = 'block';
     };
-    if (cells[6].innerHTML == 'o' &
-        cells[7].innerHTML == 'o' &
-        cells[8].innerHTML == 'o'
+    if (cells[6].innerHTML == oSimbol &
+        cells[7].innerHTML == oSimbol &
+        cells[8].innerHTML == oSimbol
     ) {
         winO();
         wPs[2].style.display = 'block';
     };
-    if (cells[0].innerHTML == 'o' &
-        cells[4].innerHTML == 'o' &
-        cells[8].innerHTML == 'o'
+    if (cells[0].innerHTML == oSimbol &
+        cells[4].innerHTML == oSimbol &
+        cells[8].innerHTML == oSimbol
     ) {
         winO();
         wPs[7].style.display = 'block';
     };
-    if (cells[2].innerHTML == 'o' &
-        cells[4].innerHTML == 'o' &
-        cells[6].innerHTML == 'o'
+    if (cells[2].innerHTML == oSimbol &
+        cells[4].innerHTML == oSimbol &
+        cells[6].innerHTML == oSimbol
     ) {
         winO();
         wPs[6].style.display = 'block';
     };
-    if (cells[0].innerHTML == 'o' &
-        cells[3].innerHTML == 'o' &
-        cells[6].innerHTML == 'o'
+    if (cells[0].innerHTML == oSimbol &
+        cells[3].innerHTML == oSimbol &
+        cells[6].innerHTML == oSimbol
     ) {
         winO();
         wPs[3].style.display = 'block';
     };
-    if (cells[1].innerHTML == 'o' &
-        cells[4].innerHTML == 'o' &
-        cells[7].innerHTML == 'o'
+    if (cells[1].innerHTML == oSimbol &
+        cells[4].innerHTML == oSimbol &
+        cells[7].innerHTML == oSimbol
     ) {
         winO();
         wPs[4].style.display = 'block';
     };
-    if (cells[2].innerHTML == 'o' &
-        cells[5].innerHTML == 'o' &
-        cells[8].innerHTML == 'o'
+    if (cells[2].innerHTML == oSimbol &
+        cells[5].innerHTML == oSimbol &
+        cells[8].innerHTML == oSimbol
     ) {
         winO();
         wPs[5].style.display = 'block';
@@ -97,76 +99,81 @@ let doing = function (e) {
 
 
 
-    if (cells[0].innerHTML == 'x' &
-        cells[1].innerHTML == 'x' &
-        cells[2].innerHTML == 'x'
+    if (cells[0].innerHTML == xSimbol &
+        cells[1].innerHTML == xSimbol &
+        cells[2].innerHTML == xSimbol
     ) {
         winX();
         wPs[0].style.display = 'block';
     };
-    if (cells[3].innerHTML == 'x' &
-        cells[4].innerHTML == 'x' &
-        cells[5].innerHTML == 'x'
+    if (cells[3].innerHTML == xSimbol &
+        cells[4].innerHTML == xSimbol &
+        cells[5].innerHTML == xSimbol
     ) {
         winX();
         wPs[1].style.display = 'block';
     };
-    if (cells[6].innerHTML == 'x' &
-        cells[7].innerHTML == 'x' &
-        cells[8].innerHTML == 'x'
+    if (cells[6].innerHTML == xSimbol &
+        cells[7].innerHTML == xSimbol &
+        cells[8].innerHTML == xSimbol
     ) {
         winX();
         wPs[2].style.display = 'block';
     };
-    if (cells[0].innerHTML == 'x' &
-        cells[4].innerHTML == 'x' &
-        cells[8].innerHTML == 'x'
+    if (cells[0].innerHTML == xSimbol &
+        cells[4].innerHTML == xSimbol &
+        cells[8].innerHTML == xSimbol
     ) {
         winX();
         wPs[7].style.display = 'block';
     };
-    if (cells[2].innerHTML == 'x' &
-        cells[4].innerHTML == 'x' &
-        cells[6].innerHTML == 'x'
+    if (cells[2].innerHTML == xSimbol &
+        cells[4].innerHTML == xSimbol &
+        cells[6].innerHTML == xSimbol
     ) {
         winX();
         wPs[6].style.display = 'block';
     };
-    if (cells[0].innerHTML == 'x' &
-        cells[3].innerHTML == 'x' &
-        cells[6].innerHTML == 'x'
+    if (cells[0].innerHTML == xSimbol &
+        cells[3].innerHTML == xSimbol &
+        cells[6].innerHTML == xSimbol
     ) {
         winX();
         wPs[3].style.display = 'block';
     };
-    if (cells[1].innerHTML == 'x' &
-        cells[4].innerHTML == 'x' &
-        cells[7].innerHTML == 'x'
+    if (cells[1].innerHTML == xSimbol &
+        cells[4].innerHTML == xSimbol &
+        cells[7].innerHTML == xSimbol
     ) {
         winX();
         wPs[4].style.display = 'block';
     };
-    if (cells[2].innerHTML == 'x' &
-        cells[5].innerHTML == 'x' &
-        cells[8].innerHTML == 'x'
+    if (cells[2].innerHTML == xSimbol &
+        cells[5].innerHTML == xSimbol &
+        cells[8].innerHTML == xSimbol
     ) {
         winX();
         wPs[5].style.display = 'block';
-    } else if (
-        (cells[0].innerHTML == 'x' || cells[0].innerHTML == 'o') &
-        (cells[1].innerHTML == 'x' || cells[1].innerHTML == 'o') &
-        (cells[2].innerHTML == 'x' || cells[2].innerHTML == 'o') &
-        (cells[3].innerHTML == 'x' || cells[3].innerHTML == 'o') &
-        (cells[4].innerHTML == 'x' || cells[4].innerHTML == 'o') &
-        (cells[5].innerHTML == 'x' || cells[5].innerHTML == 'o') &
-        (cells[6].innerHTML == 'x' || cells[6].innerHTML == 'o') &
-        (cells[7].innerHTML == 'x' || cells[7].innerHTML == 'o') &
-        (cells[8].innerHTML == 'x' || cells[8].innerHTML == 'o')
+    }
+    // if (
+    //     (cells[0].innerHTML == xSimbol || cells[0].innerHTML == oSimbol) &
+    //     (cells[1].innerHTML == xSimbol || cells[1].innerHTML == oSimbol) &
+    //     (cells[2].innerHTML == xSimbol || cells[2].innerHTML == oSimbol) &
+    //     (cells[3].innerHTML == xSimbol || cells[3].innerHTML == oSimbol) &
+    //     (cells[4].innerHTML == xSimbol || cells[4].innerHTML == oSimbol) &
+    //     (cells[5].innerHTML == xSimbol || cells[5].innerHTML == oSimbol) &
+    //     (cells[6].innerHTML == xSimbol || cells[6].innerHTML == oSimbol) &
+    //     (cells[7].innerHTML == xSimbol || cells[7].innerHTML == oSimbol) &
+    //     (cells[8].innerHTML == xSimbol || cells[8].innerHTML == oSimbol)
+    // )
+    if (
+        cells[0].innerHTML && cells[1].innerHTML && cells[2].innerHTML &&
+        cells[3].innerHTML && cells[4].innerHTML && cells[5].innerHTML &&
+        cells[6].innerHTML && cells[7].innerHTML && cells[8].innerHTML && !hasWin
     ) {
-        if (!hasWin) {
-            winAlert.style.display = "block"
-            winAlert.innerHTML = 'Ничья!';
-        }
+        winAlert.style.display = "block";
+        winAlert.innerHTML = 'Ничья!';
+
     };
 }
 window.addEventListener('click', doing);
@@ -180,19 +187,19 @@ xx.style.display = "none";
 oo.style.display = "none";
 
 function winX() {
-    hasWin = true
+    hasWin = true;
     setTimeout(() => {
-        winAlert.style.display = "block";
-        xx.style.display = "inline"
+        winAlert.style.display = "flex";
+        xx.style.display = "inline";
     }, 50);
     window.removeEventListener('click', doing);
     window.removeEventListener('touchstart', doing);
     window.removeEventListener('touchend', doing);
 }
 function winO() {
-    hasWin = true
+    hasWin = true;
     setTimeout(() => {
-        winAlert.style.display = "block";
+        winAlert.style.display = "flex";
         oo.style.display = "inline";
     }, 50);
     window.removeEventListener('click', doing);
